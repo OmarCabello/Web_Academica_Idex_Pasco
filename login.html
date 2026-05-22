@@ -1,101 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Login</title>
-
-<link rel="stylesheet" href="css/login.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - IDEX Pasco</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
 <div class="contenedor">
 
     <div class="form-box" id="loginForm">
-
         <h2>INICIAR SESIÓN</h2>
-
         <form>
-
-            <input type="email"
-            placeholder="Correo">
-
-            <input type="password"
-            placeholder="Contraseña">
-
-            <button type="submit">
-                INGRESAR
-            </button>
-
+            <input type="email" placeholder="Correo" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit">INGRESAR</button>
         </form>
-
         <p class="texto">
-
-            ¿No tienes cuenta?
-
-            <span onclick="mostrarRegistro()">
-                Regístrate
-            </span>
-
+            ¿No tienes cuenta? 
+            <span onclick="mostrarRegistro()">Regístrate</span>
         </p>
-
     </div>
 
     <div class="form-box oculto" id="registerForm">
-
         <h2>CREAR CUENTA</h2>
-
         <form>
-
-            <input type="text"
-            placeholder="Nombre completo">
-
-            <input type="email"
-            placeholder="Correo">
-
-            <input type="password"
-            placeholder="Contraseña">
-
-            <select>
-
-                <option>
-                    Seleccionar Rol
-                </option>
-
-                <option>
-                    Docente
-                </option>
-
-                <option>
-                    Estudiante
-                </option>
-
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo" required>
+            <input type="password" placeholder="Contraseña" required>
+            
+            <select required>
+                <option value="" disabled selected>Seleccionar Rol</option>
+                <option value="Docente">Docente</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Admin">Administrador</option>
+                <option value="Superadmin">Superadmin</option>
             </select>
 
-            <button type="submit">
-                RECUPERAR CONTRASEÑA
-            </button>
-
+            <button type="submit">REGISTRARSE</button>
         </form>
-
         <p class="texto">
-
-            ¿olvidaste tu contraseña?
-
-            <span onclick="mostrarLogin()">
-                Recuperar Contraseña
-            </span>
-
+            ¿Ya tienes una cuenta? 
+            <span onclick="mostrarLogin()">Iniciar Sesión</span>
         </p>
-
     </div>
 
 </div>
 
 <script src="js/app.js"></script>
-
 </body>
 </html>
