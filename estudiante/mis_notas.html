@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Notas - Estudiante</title>
+    <link rel="stylesheet" href="../css/panel.css">
+    <style>
+        /* Estilos para que el menú coincida con tu código */
+        .menu-item { cursor: pointer; padding: 10px; list-style: none; }
+        .menu-item.active { background-color: #34495e; color: white; font-weight: bold; border-radius: 5px; }
+        .btn-cerrar-sesion { cursor: pointer; color: #e74c3c; margin-top: 20px; list-style: none; }
+        
+        /* Diseño de la tabla de notas */
+        .tabla-notas {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .tabla-notas th { background-color: #2c3e50; color: white; padding: 12px; text-align: left; }
+        .tabla-notas td { padding: 12px; border-bottom: 1px solid #eee; }
+        .nota-final { font-weight: bold; }
+        .aprobado { color: #27ae60; }
+        .desaprobado { color: #c0392b; }
+    </style>
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>ESTUDIANTE</h2>
+    <nav>
+        <ul>
+            <li class="menu-item" onclick="window.location='panel.html'">📊 Dashboard</li>
+            <li class="menu-item" onclick="window.location='mis_curso.html'">📚 Mis Cursos</li>
+            <li class="menu-item active" onclick="window.location='mis_notas.html'">📝 mira Notas</li>
+            <li class="menu-item" onclick="window.location='mis_boletas.html'">⬇️ Descargar Boletas</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+        </ul>
+    </nav>
+</div>
+
+<main class="contenido">
+    <h1>Calificaciones por Área</h1>
+    <p>Consulta tus resultados académicos del semestre actual.</p>
+
+    <table class="tabla-notas">
+        <thead>
+            <tr>
+                <th>Área Académica</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Examen</th>
+                <th>Promedio</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Desarrollo de Software</td>
+                <td>15</td>
+                <td>17</td>
+                <td>16</td>
+                <td class="nota-final aprobado">16</td>
+                <td>✅ Aprobado</td>
+            </tr>
+            <tr>
+                <td>Base de Datos Avanzada</td>
+                <td>14</td>
+                <td>12</td>
+                <td>15</td>
+                <td class="nota-final aprobado">14</td>
+                <td>✅ Aprobado</td>
+            </tr>
+            <tr>
+                <td>Arquitectura de Sistemas</td>
+                <td>10</td>
+                <td>11</td>
+                <td>08</td>
+                <td class="nota-final desaprobado">09</td>
+                <td>❌ Reprobado</td>
+            </tr>
+            <tr>
+                <td>Inglés Técnico II</td>
+                <td>18</td>
+                <td>19</td>
+                <td>17</td>
+                <td class="nota-final aprobado">18</td>
+                <td>✅ Aprobado</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+</body>
+</html>
