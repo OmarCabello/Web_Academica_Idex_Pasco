@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-
-<title>Docente</title>
-
-<link rel="stylesheet" href="../css/panel.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Docente - IDEX Pasco</title>
+    <link rel="stylesheet" href="../css/panel.css">
 </head>
 <body>
 
-<div class="sidebar">
-
-    <h2>DOCENTE</h2>
-
-    <ul>
-
-        <li>Dashboard</li>
-        <li>Mis Cursos</li>
-        <li>Subir Notas</li>
-        <li>Ver Estudiantes</li>
-
-    </ul>
-
-</div>
-
-<div class="contenido">
-
-    <h1>
-        Bienvenido Docente
-    </h1>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Cursos Asignados</h3>
-            <p>5 Cursos</p>
-        </div>
-
-        <div class="card">
-            <h3>Estudiantes</h3>
-            <p>80 Estudiantes</p>
-        </div>
-
+    <div class="sidebar">
+        <h2>IDEX PASCO</h2>
+        <div class="rol-etiqueta">👨‍🏫 DOCENTE</div>
+        <ul>
+            <li class="menu-item active" onclick="window.location='panel.html'">📊 Dashboard</li>
+            <li class="menu-item" onclick="window.location='cursos.html'">📚 Mis Cursos</li>
+            <li class="menu-item" onclick="window.location='notas.html'">📝 Subir Notas</li>
+            <li class="menu-item" onclick="window.location='estudiantes.html'">👥 Ver Estudiantes</li>
+            <li class="menu-item" onclick="window.location='informes.html'">📊 Informes y Reportes</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+        </ul>
     </div>
 
-</div>
+    <div class="contenido">
+        <h1>Bienvenido Docente</h1>
+        <p class="descripcion-seccion">Resumen general del periodo académico actual en IDEX Pasco.</p>
+        
+        <div class="cards">
+            <div class="card">
+                <h3>📚 Cursos Asignados</h3>
+                <p>5 Cursos</p>
+            </div>
+            <div class="card">
+                <h3>👥 Estudiantes</h3>
+                <p>80 Alumnos</p>
+            </div>
+            <div class="card">
+                <h3>🔔 Avisos</h3>
+                <p>2 Activos</p>
+            </div>
+        </div>
+
+        <div class="tarjeta-blanca margin-top">
+            <h3 style="color: #2563eb; margin-bottom: 8px;">📌 Recordatorio del Día</h3>
+            <p>Recuerde que el ingreso de calificaciones correspondientes a la Evaluación Parcial cierra este fin de semana. Por favor, cargue sus registros a tiempo.</p>
+        </div>
+    </div>
 
 </body>
 </html>

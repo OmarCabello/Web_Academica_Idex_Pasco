@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Notas - IDEX Pasco</title>
+    <link rel="stylesheet" href="../css/panel.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>IDEX PASCO</h2>
+        <div class="rol-etiqueta">👨‍🏫 DOCENTE</div>
+        <ul>
+            <li class="menu-item" onclick="window.location='panel.html'">📊 Dashboard</li>
+            <li class="menu-item" onclick="window.location='cursos.html'">📚 Mis Cursos</li>
+            <li class="menu-item active" onclick="window.location='notas.html'">📝 Subir Notas</li>
+            <li class="menu-item" onclick="window.location='estudiantes.html'">👥 Ver Estudiantes</li>
+            <li class="menu-item" onclick="window.location='informes.html'">📊 Informes y Reportes</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+        </ul>
+    </div>
+
+    <div class="contenido">
+        <h1>📝 Registro de Calificaciones</h1>
+        <p class="descripcion-seccion">Seleccione el curso, el alumno y registre las notas evaluativas del ciclo.</p>
+
+        <div class="tarjeta-blanca max-width-form">
+            <form class="formulario-notas" onsubmit="alert('¡Notas guardadas correctamente!'); return false;">
+                <div class="grupo-input">
+                    <label>1. Seleccionar Curso / Unidad Didáctica</label>
+                    <select required>
+                        <option value="">-- Elige un curso asignado --</option>
+                        <option>Desarrollo de Software Integrado</option>
+                        <option>Sistemas Operativos Complejos</option>
+                        <option>Análisis de Redes de Datos</option>
+                        <option>Electrónica Analógica y Digital</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input">
+                    <label>2. Seleccionar Estudiante</label>
+                    <select required>
+                        <option value="">-- Elige el alumno de la lista --</option>
+                        <option>Juan Pérez Ramos</option>
+                        <option>María Mendoza Ortiz</option>
+                        <option>Kevin Solis Vega</option>
+                        <option>Lizbeth Carhuaricra Alania</option>
+                    </select>
+                </div>
+
+                <div class="grupo-input-corto">
+                    <div>
+                        <label>Evaluación Continua (EC)</label>
+                        <input type="number" min="0" max="20" placeholder="0 - 20" required>
+                    </div>
+                    <div>
+                        <label>Evaluación Final (EF)</label>
+                        <input type="number" min="0" max="20" placeholder="0 - 20" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-guardar">💾 Registrar y Subir Notas</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
