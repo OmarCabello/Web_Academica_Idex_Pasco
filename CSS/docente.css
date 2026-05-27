@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+
 *{
     margin: 0;
     padding: 0;
@@ -8,9 +6,7 @@
     font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
-/* =========================
-   BODY
-========================= */
+
 body{
     display: flex;
     min-height: 100vh;
