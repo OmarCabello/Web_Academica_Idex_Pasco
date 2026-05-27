@@ -1,57 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-<meta charset="UTF-8">
-
-<title>Estudiante</title>
-
-<link rel="stylesheet" href="../css/panel.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiante - Panel Control</title>
+    <link rel="stylesheet" href="../css/panel.css">
 </head>
 <body>
 
-<div class="sidebar">
-
+<aside class="sidebar">
     <h2>ESTUDIANTE</h2>
+    <nav>
+        <ul>
+            <li class="menu-item active" onclick="window.location='panel.html'">📊 Dashboard</li>
+            <li class="menu-item" onclick="window.location='mis_curso.html'">📚 Mis Cursos</li>
+            <li class="menu-item" onclick="window.location='mis_notas.html'">📝 mira Notas</li>
+            <li class="menu-item" onclick="window.location='mis_boletas.html'">⬇️ Descargar Boletas</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+        </ul>
+    </nav>
+    
+</aside>
 
-    <ul>
-
-        <li>Dashboard</li>
-        <li>Mis Cursos</li>
-        <li>Mis Notas</li>
-        <li>Mi Boleta</li>
-
-    </ul>
-
-</div>
-
-<div class="contenido">
-
-    <h1>
-        Bienvenido Estudiante
-    </h1>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Semestre</h3>
-            <p>2026 - I</p>
+<main class="contenido" id="contenedor-principal">
+    <section id="dashboard">
+        <h1>Bienvenido Estudiante</h1>
+        <div class="cards">
+            <div class="card">
+                <h3>Semestre</h3>
+                <p>2026 - I</p>
+            </div>
+            <div class="card">
+                <h3>Unidad didáctica</h3>
+                <p>7 Cursos</p>
+            </div>
+            <div class="card">
+                <h3>Promedio</h3>
+                <p>16.5</p>
+            </div>
         </div>
+    </section>
+</main>
 
-        <div class="card">
-            <h3>Cursos</h3>
-            <p>6 Cursos</p>
-        </div>
-
-        <div class="card">
-            <h3>Promedio</h3>
-            <p>16.5</p>
-        </div>
-
-    </div>
-
-</div>
 
 </body>
 </html>
