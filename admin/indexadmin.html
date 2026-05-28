@@ -2,38 +2,89 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Administrador - IDEX Pasco</title>
     <link rel="stylesheet" href="css/styleadmin.css">
 </head>
 <body>
-    <nav class="sidebar">
+    <!-- Menú Lateral de Navegación -->
+    <nav class="sidebar" aria-label="Navegación principal">
         <div class="logo">
             <h2>IDEX PASCO</h2>
         </div>
         <ul>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Gestionar Estudiantes</a></li>
-            <li><a href="#">Gestionar Docentes</a></li>
-            <li><a href="#">Reporte de Matrículas</a></li>
-            <li><a href="#">Comunicados Institucionales</a></li>
-            <li class="logout"><a href="#">Cerrar Sesión</a></li>
+            <li><a href="indexadmin.html" class="active">Dashboard</a></li>
+            
+            <!-- Gestión de Estudiantes y Matrículas -->
+            <li><a href="estudiantes.html">Gestionar Estudiantes</a></li>
+            
+            <!-- Gestión de Docentes con Submenú (PRD: Asignación de Docentes) -->
+            <li>
+                <a href="docentes.html">Gestionar Docentes</a>
+                <ul class="submenu">
+                    <li><a href="asignar-docente.html">Asignación de Docentes</a></li>
+                </ul>
+            </li>
+            
+            <!-- Configuración Académica (PRD: Carreras, Cursos y Semestres) -->
+            <li>
+                <a href="#">Configuración Académica</a>
+                <ul class="submenu">
+                    <li><a href="carreras.html">Gestión de Carreras</a></li>
+                    <li><a href="cursos.html">Gestión de Cursos</a></li>
+                    <li><a href="semestres.html">Gestión de Semestres</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="matriculas.html">Reporte de Matrículas</a></li>
+            <li><a href="comunicados.html">Comunicados Institucionales</a></li>
+            <li class="logout"><a href="logout.php">Cerrar Sesión</a></li>
         </ul>
     </nav>
 
+    <!-- Contenido Principal del Dashboard -->
     <main class="main-content">
         <header>
             <h1>Panel Administrativo</h1>
         </header>
         
-        <section class="dashboard-stats">
-            <div class="card">Estudiantes Totales: 1,200</div>
-            <div class="card">Docentes Activos: 45</div>
-            <div class="card">Matrículas Pendientes: 12</div>
+        <!-- Sección de métricas globales según PRD -->
+        <section class="dashboard-stats" aria-label="Métricas globales">
+            <article class="card">
+                <h3>Estudiantes</h3>
+                <p class="stat-value">1,200</p>
+            </article>
+            <article class="card">
+                <h3>Docentes</h3>
+                <p class="stat-value">45</p>
+            </article>
+            <article class="card">
+                <h3>Matrículas Pendientes</h3>
+                <p class="stat-value">12</p>
+            </article>
+            <article class="card">
+                <h3>Carreras Activas</h3>
+                <p class="stat-value">8</p>
+            </article>
         </section>
 
+        <!-- Área de Trabajo Principal y Accesos Rápidos -->
         <section class="work-area">
-            <h3>Bienvenido al sistema</h3>
-            <p>Selecciona una opción del menú lateral para gestionar los recursos del instituto.</p>
+            <div class="welcome-text">
+                <h3>Bienvenido al sistema</h3>
+                <p>Selecciona una opción del menú lateral para gestionar los recursos del instituto.</p>
+            </div>
+
+            <!-- PRD: Bloque Semántico para Generación de Reportes en PDF -->
+            <hr>
+            <section class="quick-actions" aria-label="Accesos directos a reportes">
+                <h4>Generación de Reportes Académicos (PDF)</h4>
+                <p>Exporta la información oficial del semestre directamente en formato PDF:</p>
+                <div class="report-buttons">
+                    <a href="exportar_actas.php" class="btn-pdf">Descargar Acta de Notas (PDF)</a>
+                    <a href="exportar_estudiantes.php" class="btn-pdf">Descargar Lista de Estudiantes (PDF)</a>
+                </div>
+            </section>
         </section>
     </main>
 </body>
