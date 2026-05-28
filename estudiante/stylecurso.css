@@ -1,0 +1,148 @@
+/* stylecurso.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    width: 230px;
+    background-color: #1a1f2e;
+    color: white;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.rol-etiqueta {
+    background-color: #2a3145;
+    color: #aab0c0;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.menu-item {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #cdd2de;
+    background-color: #252b3b;
+    transition: background 0.2s;
+}
+
+.menu-item:hover {
+    background-color: #2f3750;
+    color: white;
+}
+
+.menu-item.active {
+    background-color: #2f3750;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-cerrar-sesion {
+    padding: 12px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    background-color: #c0392b;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.btn-cerrar-sesion:hover {
+    background-color: #e74c3c;
+}
+
+/* ===== CONTENIDO ===== */
+.contenido {
+    flex: 1;
+    padding: 35px 40px;
+}
+
+.contenido h1 {
+    font-size: 26px;
+    color: #1a1f2e;
+    margin-bottom: 8px;
+}
+
+.descripcion-seccion {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* ===== TARJETA ===== */
+.tarjeta-blanca {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    overflow-x: auto;
+}
+
+/* ===== TABLA ===== */
+.tabla-academica {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.tabla-academica thead tr {
+    background-color: #1a1f2e;
+    color: white;
+}
+
+.tabla-academica th {
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.tabla-academica td {
+    padding: 12px 15px;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tabla-academica tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.tabla-academica tbody tr:last-child td {
+    border-bottom: none;
+}

@@ -84,9 +84,6 @@ function(e){
     mostrarLogin();
 
 });
-
-/* LOGIN */
-
 const formularioLogin =
 document.querySelector("#loginForm form");
 
@@ -144,5 +141,11 @@ function(e){
         "estudiante/panel.html";
 
     }
+    if(usuario.rol === "Coordinador"){
+
+    window.location =
+    "coordinador/panel.html";
+
+}
 
 });
