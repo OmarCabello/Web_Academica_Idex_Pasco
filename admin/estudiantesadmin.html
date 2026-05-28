@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes - IDEX Pasco</title>
+    <link rel="stylesheet" href="css/styleadmin.css">
+</head>
+<body>
+    <nav class="sidebar" aria-label="Navegación principal">
+        <div class="logo">
+            <h2>IDEX PASCO</h2>
+        </div>
+        <ul>
+            <li><a href="indexadmin.html">Dashboard</a></li>
+            <li><a href="estudiantesadmin.html" class="active">Gestionar Estudiantes</a></li>
+            <li>
+                <a href="docentes.html">Gestionar Docentes</a>
+                <ul class="submenu">
+                    <li><a href="asignar-docente.html">Asignación de Docentes</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Configuración Académica</a>
+                <ul class="submenu">
+                    <li><a href="carreras.html">Gestión de Carreras</a></li>
+                    <li><a href="cursos.html">Gestión de Cursos</a></li>
+                    <li><a href="semestres.html">Gestión de Semestres</a></li>
+                </ul>
+            </li>
+            <li><a href="matriculas.html">Reporte de Matrículas</a></li>
+            <li><a href="comunicados.html">Comunicados Institucionales</a></li>
+            <li class="logout"><a href="logout.php">Cerrar Sesión</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <header>
+            <h1>Gestión de Estudiantes</h1>
+        </header>
+
+        <section class="management-form" aria-labelledby="form-title">
+            <h2 id="form-title">Registrar / Editar Estudiante</h2>
+            <form action="procesar_estudiante.php" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="codigo">Código de Estudiante:</label>
+                        <input type="text" id="codigo" name="codigo" pattern="[0-9]{8}" maxlength="8" placeholder="Ej. 20261024" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dni">Número de DNI:</label>
+                        <input type="text" id="dni" name="dni" pattern="[0-9]{8}" maxlength="8" placeholder="Ej. 74589632" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" placeholder="Ej. Palacios Rios" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombres">Nombres:</label>
+                        <input type="text" id="nombres" name="nombres" placeholder="Ej. Juan Carlos" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico Institucional:</label>
+                        <input type="email" id="email" name="email" placeholder="ejemplo@idexpasco.edu.pe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="celular">Número de Celular:</label>
+                        <input type="tel" id="celular" name="celular" pattern="[9][0-9]{8}" maxlength="9" placeholder="Ej. 963852741">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="programa">Programa de Estudios:</label>
+                        <select id="programa" name="programa" required>
+                            <option value="">-- Seleccione una Carrera --</option>
+                            <option value="1">Arquitectura de Plataformas y Servicios TI</option>
+                            <option value="2">Enfermería Técnica</option>
+                            <option value="3">Contabilidad</option>
+                            <option value="4">Mecánica Automotriz</option>
+                            <option value="5">Electrotecnia Industrial</option>
+                            <option value="6">Secretariado Ejecutivo</option>
+                            <option value="7">Producción Agropecuaria</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="periodo">Periodo Académico:</label>
+                        <select id="periodo" name="periodo" required>
+                            <option value="2026-I">2026-I (Semestre Impar)</option>
+                            <option value="2026-II">2026-II (Semestre Par)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semestre">Semestre / Ciclo:</label>
+                        <select id="semestre" name="semestre" required>
+                            <option value="I">I Semestre</option>
+                            <option value="II">II Semestre</option>
+                            <option value="III">III Semestre</option>
+                            <option value="IV">IV Semestre</option>
+                            <option value="V">V Semestre</option>
+                            <option value="VI">VI Semestre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="turno">Turno:</label>
+                        <select id="turno" name="turno" required>
+                            <option value="Mañana">Mañana</option>
+                            <option value="Tarde">Tarde</option>
+                            <option value="Nocturno">Nocturno</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sexo">Sexo (Minedu):</label>
+                        <select id="sexo" name="sexo" required>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado de Matrícula:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="Activo">Activo / Regular</option>
+                            <option value="Licencia">Licencia de Estudios</option>
+                            <option value="Retirado">Retirado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-save">Guardar Estudiante</button>
+                    <button type="reset" class="btn-cancel">Limpiar Formulario</button>
+                </div>
+            </form>
+        </section>
+
+        <hr>
+        <section class="search-filters" aria-label="Filtros de búsqueda">
+            <h3>Buscar Estudiantes</h3>
+            <div class="filter-grid">
+                <input type="text" placeholder="Buscar por DNI, Código o Apellidos...">
+                <select>
+                    <option value="">Todos los Programas</option>
+                    <option value="1">Arquitectura de Plataformas TI</option>
+                </select>
+                <button type="button" class="btn-search">Filtrar</button>
+            </div>
+        </section>
+
+        <section class="table-container" aria-label="Lista de estudiantes registrados">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>DNI</th>
+                        <th>Apellidos y Nombres</th>
+                        <th>Programa de Estudios</th>
+                        <th>Periodo</th>
+                        <th>Sem.</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>20260012</td>
+                        <td>71234567</td>
+                        <td>Pasco Berrospi, Alex</td>
+                        <td>Arquitectura de Plataformas TI</td>
+                        <td>2026-I</td>
+                        <td>II</td>
+                        <td><span class="badge active">Activo</span></td>
+                        <td>
+                            <a href="#" class="btn-edit">Editar</a>
+                            <a href="#" class="btn-delete">Eliminar</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
