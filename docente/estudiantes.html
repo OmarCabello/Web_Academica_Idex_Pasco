@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Estudiantes - IDEX Pasco</title>
+    <link rel="stylesheet" href="../CSS/docente.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>IDEX PASCO</h2>
+        <div class="rol-etiqueta">👨‍🏫 DOCENTE</div>
+        <ul>
+            <li class="menu-item" onclick="window.location='panel.html'">📊 Dashboard</li>
+            <li class="menu-item" onclick="window.location='cursos.html'">📚 Mis Cursos</li>
+            <li class="menu-item" onclick="window.location='notas.html'">📝 Subir Notas</li>
+            <li class="menu-item active" onclick="window.location='estudiantes.html'">👥 Ver Estudiantes</li>
+            <li class="menu-item" onclick="window.location='informes.html'">📊 Informes y Reportes</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+        </ul>
+    </div>
+
+    <div class="contenido">
+        <h1>👥 Listado Oficial de Estudiantes</h1>
+        <p class="descripcion-seccion">Monitoree la asistencia y estado académico de los alumnos matriculados.</p>
+
+        <div class="tarjeta-blanca">
+            <table class="tabla-academica">
+                <thead>
+                    <tr>
+                        <th>DNI / Código</th>
+                        <th>Apellidos y Nombres</th>
+                        <th>Programa de Estudios</th>
+                        <th>Estado Matrícula</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>72458123</td>
+                        <td>Juan Pérez Ramos</td>
+                        <td>Computación e Informática</td>
+                        <td><span class="estado activo">Activo</span></td>
+                    </tr>
+                    <tr>
+                        <td>74851239</td>
+                        <td>María Mendoza Ortiz</td>
+                        <td>Computación e Informática</td>
+                        <td><span class="estado activo">Activo</span></td>
+                    </tr>
+                    <tr>
+                        <td>71025488</td>
+                        <td>Kevin Solis Vega</td>
+                        <td>Electrónica Industrial</td>
+                        <td><span class="estado activo">Activo</span></td>
+                    </tr>
+                    <tr>
+                        <td>76932541</td>
+                        <td>Lizbeth Carhuaricra Alania</td>
+                        <td>Computación e Informática</td>
+                        <td><span class="estado regular">Observado</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>
