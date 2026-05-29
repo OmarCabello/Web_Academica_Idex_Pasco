@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Estudiantes - IDEX Pasco</title>
     <link rel="stylesheet" href="../CSS/docente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
     <div class="sidebar">
         <h2>IDEX PASCO</h2>
-        <div class="rol-etiqueta">👨‍🏫 DOCENTE</div>
+        <div class="user-profile-box" style="text-align: center; padding: 15px 0; border-bottom: 1px solid #334155;">
+            <img src="https://i0.wp.com/idexpasco.edu.pe/wp-content/uploads/2024/03/Omar_Rivera_Z.png?resize=367%2C371&ssl=1" alt="Ing. Mg. Omar Rivera Z." style="width: 90px; height: 95px; border-radius: 50%; object-fit: cover; border: 2px solid #38bdf8; margin-bottom: 8px;">
+            <div style="color: #f8fafc; font-size: 13px; font-weight: 600; padding: 0 10px;">Ing. Mg. Omar Rivera Z.</div>
+            <div class="rol-etiqueta" style="margin-top: 5px; display: inline-block;">👨‍🏫 DOCENTE ORD.</div>
+        </div>
         <ul>
-            <li class="menu-item" onclick="window.location='panel.html'">📊 Dashboard</li>
-            <li class="menu-item" onclick="window.location='cursos.html'">📚 Mis Cursos</li>
-            <li class="menu-item" onclick="window.location='notas.html'">📝 Subir Notas</li>
-            <li class="menu-item active" onclick="window.location='estudiantes.html'">👥 Ver Estudiantes</li>
-            <li class="menu-item" onclick="window.location='informes.html'">📊 Informes y Reportes</li>
-            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+            <li class="menu-item" onclick="window.location='panel.html'"><i class="fa-solid fa-chart-pie"></i> Dashboard</li>
+            <li class="menu-item" onclick="window.location='cursos.html'"><i class="fa-solid fa-book"></i> Mis Cursos</li>
+            <li class="menu-item" onclick="window.location='notas.html'"><i class="fa-solid fa-pen-to-square"></i> Subir Notas</li>
+            <li class="menu-item active" onclick="window.location='estudiantes.html'"><i class="fa-solid fa-users"></i> Ver Estudiantes</li>
+            <li class="menu-item" onclick="window.location='informes.html'"><i class="fa-solid fa-file-lines"></i> Informes y Reportes</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</li>
         </ul>
     </div>
 
     <div class="contenido">
-        <h1>👥 Listado Oficial de Estudiantes</h1>
+        <h1><i class="fa-solid fa-user-group"></i> Listado Oficial de Estudiantes</h1>
         <p class="descripcion-seccion">Monitoree la asistencia y estado académico de los alumnos matriculados.</p>
 
         <div class="tarjeta-blanca">
@@ -38,27 +43,27 @@
                 <tbody>
                     <tr>
                         <td>72458123</td>
-                        <td>Juan Pérez Ramos</td>
+                        <td><strong>Juan Pérez Ramos</strong></td>
                         <td>Computación e Informática</td>
-                        <td><span class="estado activo">Activo</span></td>
+                        <td><span class="estado activo" style="background: #dcfce7; color: #16a34a; padding: 3px 8px; border-radius: 4px; font-weight: bold;">Activo</span></td>
                     </tr>
                     <tr>
                         <td>74851239</td>
-                        <td>María Mendoza Ortiz</td>
+                        <td><strong>María Mendoza Ortiz</strong></td>
                         <td>Computación e Informática</td>
-                        <td><span class="estado activo">Activo</span></td>
+                        <td><span class="estado activo" style="background: #dcfce7; color: #16a34a; padding: 3px 8px; border-radius: 4px; font-weight: bold;">Activo</span></td>
                     </tr>
                     <tr>
                         <td>71025488</td>
-                        <td>Kevin Solis Vega</td>
+                        <td><strong>Kevin Solis Vega</strong></td>
                         <td>Electrónica Industrial</td>
-                        <td><span class="estado activo">Activo</span></td>
+                        <td><span class="estado activo" style="background: #dcfce7; color: #16a34a; padding: 3px 8px; border-radius: 4px; font-weight: bold;">Activo</span></td>
                     </tr>
                     <tr>
                         <td>76932541</td>
-                        <td>Lizbeth Carhuaricra Alania</td>
+                        <td><strong>Lizbeth Carhuaricra Alania</strong></td>
                         <td>Computación e Informática</td>
-                        <td><span class="estado regular">Observado</span></td>
+                        <td><span class="estado regular" style="background: #fef9c3; color: #a16207; padding: 3px 8px; border-radius: 4px; font-weight: bold;">Observado</span></td>
                     </tr>
                 </tbody>
             </table>
