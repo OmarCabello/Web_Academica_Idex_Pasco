@@ -1,83 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Coordinador</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Coordinador</title>
-
-<link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/coordinador.css">
 </head>
+
 <body>
 
-<div class="sidebar">
+    <!-- SIDEBAR -->
 
-    <h2>COORDINADOR</h2>
+    <aside class="sidebar">
 
-    <ul>
+        <h2>IDEX PASCO</h2>
 
-        <li>Dashboard</li>
+        <ul>
 
-        <li>Mi Carrera</li>
+            <li><a href="panel.html">Dashboard</a></li>
 
-        <li>Docentes</li>
+            <li><a href="modulos.html">Módulos</a></li>
 
-        <li>Estudiantes</li>
+            <li><a href="notas.html">Notas</a></li>
 
-        <li>Cursos</li>
+            <li><a href="reportes.html">Reportes</a></li>
 
-        <li>Notas</li>
+            <li><a href="rendimiento.html">Rendimiento</a></li>
 
-        <li>Semestres</li>
+        </ul>
 
-    </ul>
+    </aside>
 
-</div>
+    <!-- CONTENIDO -->
 
-<div class="contenido">
+    <main class="contenido">
 
-    <h1>
-        Bienvenido Coordinador
-    </h1>
+        <header>
 
-    <div class="cards">
+            <h1>Panel del Coordinador Académico</h1>
 
-        <div class="card">
+        </header>
 
-            <h3>Carrera</h3>
+        <!-- TARJETAS -->
 
-            <p>Ingeniería de Sistemas</p>
+        <section class="cards">
 
-        </div>
+            <div class="card">
+                <h3>Docentes</h3>
+                <p>15</p>
+            </div>
 
-        <div class="card">
+            <div class="card">
+                <h3>Estudiantes</h3>
+                <p>120</p>
+            </div>
 
-            <h3>Docentes</h3>
+            <div class="card">
+                <h3>Módulos</h3>
+                <p>8</p>
+            </div>
 
-            <p>15 Docentes</p>
+            <div class="card">
+                <h3>Semestres</h3>
+                <p>4</p>
+            </div>
 
-        </div>
+        </section>
 
-        <div class="card">
+        <!-- TABLA -->
 
-            <h3>Estudiantes</h3>
+        <section class="tabla-section">
 
-            <p>240 Estudiantes</p>
+            <h2>Seguimiento Académico</h2>
 
-        </div>
+            <table>
 
-        <div class="card">
+                <thead>
 
-            <h3>Cursos</h3>
+                    <tr>
+                        <th>Docente</th>
+                        <th>Curso</th>
+                        <th>Semestre</th>
+                        <th>Estado</th>
+                    </tr>
 
-            <p>35 Cursos</p>
+                </thead>
 
-        </div>
+                <tbody>
 
-    </div>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>Programación Web</td>
+                        <td>III</td>
+                        <td>Completo</td>
+                    </tr>
 
-</div>
+                    <tr>
+                        <td>María Torres</td>
+                        <td>Base de Datos</td>
+                        <td>II</td>
+                        <td>Pendiente</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="../js/coordinador.js"></script>
 
 </body>
 </html>
