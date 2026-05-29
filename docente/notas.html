@@ -5,28 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subir Notas - IDEX Pasco</title>
     <link rel="stylesheet" href="../CSS/docente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
     <div class="sidebar">
         <h2>IDEX PASCO</h2>
-        <div class="rol-etiqueta">👨‍🏫 DOCENTE</div>
+        <div class="user-profile-box" style="text-align: center; padding: 15px 0; border-bottom: 1px solid #334155;">
+            <img src="https://i0.wp.com/idexpasco.edu.pe/wp-content/uploads/2024/03/Omar_Rivera_Z.png?resize=367%2C371&ssl=1" alt="Ing. Mg. Omar Rivera Z." style="width: 90px; height: 95px; border-radius: 50%; object-fit: cover; border: 2px solid #38bdf8; margin-bottom: 8px;">
+            <div style="color: #f8fafc; font-size: 13px; font-weight: 600; padding: 0 10px;">Ing. Mg. Omar Rivera Z.</div>
+            <div class="rol-etiqueta" style="margin-top: 5px; display: inline-block;">👨‍🏫 DOCENTE ORD.</div>
+        </div>
         <ul>
-            <li class="menu-item" onclick="window.location='panel.html'">📊 Dashboard</li>
-            <li class="menu-item" onclick="window.location='cursos.html'">📚 Mis Cursos</li>
-            <li class="menu-item active" onclick="window.location='notas.html'">📝 Subir Notas</li>
-            <li class="menu-item" onclick="window.location='estudiantes.html'">👥 Ver Estudiantes</li>
-            <li class="menu-item" onclick="window.location='informes.html'">📊 Informes y Reportes</li>
-            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+            <li class="menu-item" onclick="window.location='panel.html'"><i class="fa-solid fa-chart-pie"></i> Dashboard</li>
+            <li class="menu-item" onclick="window.location='cursos.html'"><i class="fa-solid fa-book"></i> Mis Cursos</li>
+            <li class="menu-item active" onclick="window.location='notas.html'"><i class="fa-solid fa-pen-to-square"></i> Subir Notas</li>
+            <li class="menu-item" onclick="window.location='estudiantes.html'"><i class="fa-solid fa-users"></i> Ver Estudiantes</li>
+            <li class="menu-item" onclick="window.location='informes.html'"><i class="fa-solid fa-file-lines"></i> Informes y Reportes</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</li>
         </ul>
     </div>
 
     <div class="contenido">
-        <h1>📝 Registro de Calificaciones</h1>
+        <h1><i class="fa-solid fa-file-signature"></i> Registro de Calificaciones</h1>
         <p class="descripcion-seccion">Seleccione el curso, el alumno y registre las notas evaluativas del ciclo.</p>
 
         <div class="tarjeta-blanca max-width-form">
-            <form class="formulario-notas" onsubmit="alert('¡Notas guardadas correctamente!'); return false;">
+            <form class="formulario-notas" onsubmit="alert('¡Notas guardadas correctamente en el sistema institucional!'); return false;">
                 <div class="grupo-input">
                     <label>1. Seleccionar Curso / Unidad Didáctica</label>
                     <select required>
@@ -60,7 +65,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn-guardar">💾 Registrar y Subir Notas</button>
+                <button type="submit" class="btn-guardar"><i class="fa-solid fa-floppy-disk"></i> Registrar y Subir Notas</button>
             </form>
         </div>
     </div>

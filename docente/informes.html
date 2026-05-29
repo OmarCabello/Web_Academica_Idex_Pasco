@@ -5,43 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informes y Reportes - IDEX Pasco</title>
     <link rel="stylesheet" href="../CSS/docente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
     <div class="sidebar">
         <h2>IDEX PASCO</h2>
-        <div class="rol-etiqueta">👨‍🏫 DOCENTE</div>
+        <div class="user-profile-box" style="text-align: center; padding: 15px 0; border-bottom: 1px solid #334155;">
+            <img src="https://i0.wp.com/idexpasco.edu.pe/wp-content/uploads/2024/03/Omar_Rivera_Z.png?resize=367%2C371&ssl=1" alt="Ing. Mg. Omar Rivera Z." style="width: 90px; height: 95px; border-radius: 50%; object-fit: cover; border: 2px solid #38bdf8; margin-bottom: 8px;">
+            <div style="color: #f8fafc; font-size: 13px; font-weight: 600; padding: 0 10px;">Ing. Mg. Omar Rivera Z.</div>
+            <div class="rol-etiqueta" style="margin-top: 5px; display: inline-block;">👨‍🏫 DOCENTE ORD.</div>
+        </div>
         <ul>
-            <li class="menu-item" onclick="window.location='panel.html'">📊 Dashboard</li>
-            <li class="menu-item" onclick="window.location='cursos.html'">📚 Mis Cursos</li>
-            <li class="menu-item" onclick="window.location='notas.html'">📝 Subir Notas</li>
-            <li class="menu-item" onclick="window.location='estudiantes.html'">👥 Ver Estudiantes</li>
-            <li class="menu-item active" onclick="window.location='informes.html'">📊 Informes y Reportes</li>
-            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+            <li class="menu-item" onclick="window.location='panel.html'"><i class="fa-solid fa-chart-pie"></i> Dashboard</li>
+            <li class="menu-item" onclick="window.location='cursos.html'"><i class="fa-solid fa-book"></i> Mis Cursos</li>
+            <li class="menu-item" onclick="window.location='notas.html'"><i class="fa-solid fa-pen-to-square"></i> Subir Notas</li>
+            <li class="menu-item" onclick="window.location='estudiantes.html'"><i class="fa-solid fa-users"></i> Ver Estudiantes</li>
+            <li class="menu-item active" onclick="window.location='informes.html'"><i class="fa-solid fa-file-lines"></i> Informes y Reportes</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</li>
         </ul>
     </div>
 
     <div class="contenido">
-        <h1>📊 Centro de Informes y Reportes</h1>
+        <h1><i class="fa-solid fa-chart-bar"></i> Centro de Informes y Reportes</h1>
         <p class="descripcion-seccion">Genere, visualice y exporte las actas de evaluación y rendimiento de sus estudiantes.</p>
 
         <div class="cards">
             <div class="card" style="border-left: 5px solid #22c55e;">
-                <h3>📈 Promedio General</h3>
+                <h3><i class="fa-solid fa-chart-line"></i> Promedio General</h3>
                 <p>15.4 / 20</p>
             </div>
             <div class="card" style="border-left: 5px solid #ef4444;">
-                <h3>⚠️ Alumnos en Riesgo</h3>
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Alumnos en Riesgo</h3>
                 <p>4 Estudiantes</p>
             </div>
             <div class="card" style="border-left: 5px solid #eab308;">
-                <h3>📋 Actas Consolidadas</h3>
+                <h3><i class="fa-solid fa-clipboard-list"></i> Actas Consolidadas</h3>
                 <p>3 de 5 Listas</p>
             </div>
         </div>
 
         <div class="tarjeta-blanca margin-top max-width-form">
-            <h3 style="color: #0f172a; margin-bottom: 15px;">🔍 Generar Reporte Personalizado</h3>
+            <h3 style="color: #0f172a; margin-bottom: 15px;"><i class="fa-solid fa-magnifying-glass"></i> Generar Reporte Personalizado</h3>
             <form class="formulario-notas" onsubmit="alert('Procesando datos académicos... El reporte se descargará en unos instantes.'); return false;">
                 <div class="grupo-input">
                     <label>Seleccionar Unidad Didáctica</label>
@@ -64,46 +69,8 @@
                     </select>
                 </div>
 
-                <button type="submit" class="btn-guardar" style="background: #0ea5e9;">⚙️ Generar e Imprimir Reporte</button>
+                <button type="submit" class="btn-guardar" style="background: #0ea5e9;"><i class="fa-solid fa-gear"></i> Generar e Imprimir Reporte</button>
             </form>
-        </div>
-
-        <div class="tarjeta-blanca margin-top">
-            <h3 style="color: #0f172a; margin-bottom: 15px;">📂 Historial de Reportes del Ciclo</h3>
-            <table class="tabla-academica">
-                <thead>
-                    <tr>
-                        <th>Fecha de Emisión</th>
-                        <th>Nombre del Documento</th>
-                        <th>Curso Relacionado</th>
-                        <th>Formato</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>26/05/2026</td>
-                        <td>Acta_Parcial_Ciclo_I.pdf</td>
-                        <td>Desarrollo de Software</td>
-                        <td><span class="estado" style="background: #fee2e2; color: #ef4444;">PDF</span></td>
-                        <td><button class="btn-descarga" onclick="alert('Descargando archivo PDF...')">⬇️ Descargar</button></td>
-                    </tr>
-                    <tr>
-                        <td>20/05/2026</td>
-                        <td>Consolidado_Asistencia_Mayo.xlsx</td>
-                        <td>Sistemas Operativos</td>
-                        <td><span class="estado" style="background: #dcfce7; color: #16a34a;">EXCEL</span></td>
-                        <td><button class="btn-descarga" onclick="alert('Descargando archivo Excel...')">⬇️ Descargar</button></td>
-                    </tr>
-                    <tr>
-                        <td>12/05/2026</td>
-                        <td>Ficha_Estudiantes_Riesgo.pdf</td>
-                        <td>Electrónica Analógica</td>
-                        <td><span class="estado" style="background: #fee2e2; color: #ef4444;">PDF</span></td>
-                        <td><button class="btn-descarga" onclick="alert('Descargando archivo PDF...')">⬇️ Descargar</button></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 

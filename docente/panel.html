@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Docente - IDEX Pasco</title>
     <link rel="stylesheet" href="../CSS/docente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
     <div class="sidebar">
         <h2>IDEX PASCO</h2>
-        <div class="rol-etiqueta">👨‍🏫 DOCENTE</div>
+        
+        <div class="user-profile-box" style="text-align: center; padding: 15px 0; border-bottom: 1px solid #334155;">
+            <img src="https://i0.wp.com/idexpasco.edu.pe/wp-content/uploads/2024/03/Omar_Rivera_Z.png?resize=367%2C371&ssl=1" alt="Ing. Mg. Omar Rivera Z." style="width: 90px; height: 95px; border-radius: 50%; object-fit: cover; border: 2px solid #38bdf8; margin-bottom: 8px;">
+            <div style="color: #f8fafc; font-size: 13px; font-weight: 600; padding: 0 10px;">Ing. Mg. Omar Rivera Z.</div>
+            <div class="rol-etiqueta" style="margin-top: 5px; display: inline-block;">👨‍🏫 DOCENTE ORD.</div>
+        </div>
+
         <ul>
-            <li class="menu-item active" onclick="window.location='panel.html'">📊 Dashboard</li>
-            <li class="menu-item" onclick="window.location='cursos.html'">📚 Mis Cursos</li>
-            <li class="menu-item" onclick="window.location='notas.html'">📝 Subir Notas</li>
-            <li class="menu-item" onclick="window.location='estudiantes.html'">👥 Ver Estudiantes</li>
-            <li class="menu-item" onclick="window.location='informes.html'">📊 Informes y Reportes</li>
-            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'">🚪 Cerrar Sesión</li>
+            <li class="menu-item active" onclick="window.location='panel.html'"><i class="fa-solid fa-chart-pie"></i> Dashboard</li>
+            <li class="menu-item" onclick="window.location='cursos.html'"><i class="fa-solid fa-book"></i> Mis Cursos</li>
+            <li class="menu-item" onclick="window.location='notas.html'"><i class="fa-solid fa-pen-to-square"></i> Subir Notas</li>
+            <li class="menu-item" onclick="window.location='estudiantes.html'"><i class="fa-solid fa-users"></i> Ver Estudiantes</li>
+            <li class="menu-item" onclick="window.location='informes.html'"><i class="fa-solid fa-file-lines"></i> Informes y Reportes</li>
+            <li class="btn-cerrar-sesion" onclick="window.location='../login.html'"><i class="fa-solid fa-right-from-bracket"></i> Cerrar Sesión</li>
         </ul>
     </div>
 
@@ -27,15 +34,15 @@
         
         <div class="cards">
             <div class="card">
-                <h3>📚 Cursos Asignados</h3>
+                <h3><i class="fa-solid fa-graduation-cap"></i> Cursos Asignados</h3>
                 <p>5 Cursos</p>
             </div>
             <div class="card">
-                <h3>👥 Estudiantes</h3>
+                <h3><i class="fa-solid fa-user-graduate"></i> Estudiantes</h3>
                 <p>80 Alumnos</p>
             </div>
             <div class="card">
-                <h3>🔔 Avisos</h3>
+                <h3><i class="fa-solid fa-bell"></i> Avisos</h3>
                 <p>2 Activos</p>
             </div>
         </div>
